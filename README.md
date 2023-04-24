@@ -3,8 +3,8 @@
 | **Name**         | **Student Number** |
 |------------------|--------------------|
 | Joris Weeda      | 5641551|
-| Rami Awad        |--------------------|
-| Mohammed Msallak |--------------------|
+| Rami Awad        | 5416892| 
+| Mohamed Msallak  | 5399920|
 
 <br />
 
@@ -120,6 +120,24 @@ The created layer is more efficient and readable when compared to the layer avai
 
 ### Quaternion linear layer
 
+Just like as the quaternion convolutional layer, the quaternion-based linear layer acts as an essential element in a Quaternion Convolutional Neural Network (QCNN). The network is trained using the RMSprop optimizer and the cross-entropy loss function. The training loop performs forward and backward passes on batches of the data, updating the model's parameters with the gradients computed during backpropagation.
+
+During the forward pass, the input tensor is passed through each layer of the network, with each layer linearly transforming the tensor based on its weights and biases. This transformation process diverges from traditional neural networks as it involves the multiplication of quaternion values instead of the dot product of real-valued vectors. The final output tensor is passed through the softmax activation function to produce the class probabilities.
+
+During the backward pass, the loss gradient is computed with respect to each parameter in the network using the chain rule of calculus. The optimizer then updates each parameter by subtracting the product of its gradient and the learning rate, which determines the size of the steps taken in the direction of the gradient.
+
+The developed layer demonstrates superior efficiency and readability compared to the layer available on the Github repository associated with the paper. By utilizing PyTorch methods more effectively, our implementation leads to reduced code complexity and enhanced readability. The developed layer and the layer provided on Github are compared post-initialization to ensure that they exhibit similar initial properties. To assess the efficacy of the developed layer within the previously described architecture, we conducted three distinct training runs as part of the result reproduction process.
+
+<br/>
+
+| **Training run** | **Epochs** | **Training time** | **Dataset** | **Accuracy** |
+|------------------|------------|-------------------|-------------|--------------|
+| 1                | 80         | 30min 58s         | CIFAR10     |    76.81%    |
+| 2                | 80         | 29min 47s         | CIFAR10     |    78.19%    |
+| 3                | 80         | 29min 47s         | CIFAR10     |    78.02%    |
+
+<br/>
+
 
 ### Different weight initialisation
 The GitHub repository provides a weight initialization code that differs from the initialization method proposed in the referenced paper. The paper proposes a weight initialization method, which was applied in the reproduction of both the linear and convolutional layers using the following code snippet:
@@ -151,7 +169,7 @@ _Figure 3: Weight initialisation following the paper and PyTorch utilities._
 
 <br/>
 
-| Task                                                         | Category             | Joris Weeda | Rami Awad | Mohammed Msallak |
+| Task                                                         | Category             | Joris Weeda | Rami Awad | Mohamed Msallak |
 |--------------------------------------------------------------|----------------------|-------------|-----------|------------------|
 | Creating of CNN benchmark                                    | Reproduction results |             |     X     |                  |
 | Creating of QCNN                                             | Reproduction results |      X      |           |                  |
@@ -166,7 +184,7 @@ _Figure 3: Weight initialisation following the paper and PyTorch utilities._
 | Writing reproduction of table 1                              | Blog post            |      X      |     X     |                  |
 | Writing results reproduction quaternion convolutional layer  | Blog post            |      X      |           |                  |
 | Writing results reproduction quaternion linear layer         | Blog post            |             |           |         X        |
-| Writing Conclusion                                           | Blog post            |             |     X     |                  |
+| Writing conclusion                                           | Blog post            |             |     X     |                  |
 | Writing discussion                                           | Blog post            |             |           |         X        |
 <br/>
 
