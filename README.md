@@ -126,7 +126,7 @@ During the forward pass, the input tensor is passed through each layer of the ne
 
 During the backward pass, the loss gradient is computed with respect to each parameter in the network using the chain rule of calculus. The optimizer then updates each parameter by subtracting the product of its gradient and the learning rate, which determines the size of the steps taken in the direction of the gradient.
 
-The developed layer demonstrates superior efficiency and readability compared to the layer available on the Github repository associated with the paper. By utilizing PyTorch methods more effectively, our implementation leads to reduced code complexity and enhanced readability. The developed layer and the layer provided on Github are compared post-initialization to ensure that they exhibit similar initial properties. To assess the efficacy of the developed layer within the previously described architecture, we conducted three distinct training runs as part of the result reproduction process.
+<!-- The developed layer demonstrates superior efficiency and readability compared to the layer available on the Github repository associated with the paper. By utilizing PyTorch methods more effectively, our implementation leads to reduced code complexity and enhanced readability. The developed layer and the layer provided on Github are compared post-initialization to ensure that they exhibit similar initial properties. To assess the efficacy of the developed layer within the previously described architecture, we conducted three distinct training runs as part of the result reproduction process. -->
 
 <br/>
 
